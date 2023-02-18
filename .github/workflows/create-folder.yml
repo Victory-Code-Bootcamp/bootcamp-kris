@@ -1,7 +1,7 @@
 name: Create Folder
 on:
-  organization_invitation:
-    types: [member]
+  member:
+    types: [added]
 jobs:
   create-folder:
     runs-on: ubuntu-latest
