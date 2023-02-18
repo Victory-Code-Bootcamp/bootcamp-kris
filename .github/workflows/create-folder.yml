@@ -1,7 +1,8 @@
 name: Create Folder
 on:
-  member:
-    types: [added]
+  organization:
+    members:
+      - added
 jobs:
   create-folder:
     runs-on: ubuntu-latest
@@ -10,5 +11,6 @@ jobs:
         run: |
           mkdir $GITHUB_WORKSPACE/$MEMBER_LOGIN
           cp -r $GITHUB_WORKSPACE/.github/template/. $GITHUB_WORKSPACE/$MEMBER_LOGIN
+          echo "# Welcome to My Bootcamp, $MEMBER_LOGIN!" > $GITHUB_WORKSPACE/$MEMBER_LOGIN/README.md
         env:
-          MEMBER_LOGIN: ${{ github.event.member.login }}
+          MEMBER_LOGIN: ${{ github.event.members_added[0].login }}
