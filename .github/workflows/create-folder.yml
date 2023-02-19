@@ -6,6 +6,8 @@ jobs:
   create-folder:
     runs-on: ubuntu-latest
     steps:
+      - name: Print GitHub Workspace
+        run: echo $GITHUB_WORKSPACE
       - name: Create Student Folder
         run: |
           mkdir $GITHUB_WORKSPACE/$MEMBER_LOGIN
