@@ -1,7 +1,7 @@
 name: Create Folder
 on:
   member:
-    types: [added]
+    types: [synchronized]
 jobs:
   create-folder:
     runs-on: ubuntu-latest
