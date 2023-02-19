@@ -1,14 +1,16 @@
 name: Create Folder
+
 on:
-  member_invited:
+  membership:
     types: [added]
+
 jobs:
   create-folder:
     runs-on: ubuntu-latest
     steps:
-      - name: Create Student Folder
-        run: |
-          mkdir -p $GITHUB_WORKSPACE/$MEMBER
-          cp -R $GITHUB_WORKSPACE/template/. $GITHUB_WORKSPACE/$MEMBER/
-        env:
-          MEMBER: ${{ github.event.invitee.login }}
+    - name: Create Student Folder
+      run: |
+        mkdir $GITHUB_WORKSPACE/$MEMBER_LOGIN
+        cp -r $GITHUB_WORKSPACE/template/. $GITHUB_WORKSPACE/$MEMBER_LOGIN
+      env:
+        MEMBER_LOGIN: ${{ github.event.membership.user.login }}
