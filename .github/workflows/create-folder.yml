@@ -1,26 +1,16 @@
-name: Create Folder on Invite
-
+name: Create Folder
 on:
-  organization_invitation:
-    types: [member]
-
+  member:
+    types: [added]
 jobs:
   create-folder:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Create Folder
+      - name: Print GitHub Workspace
+        run: echo $GITHUB_WORKSPACE
+      - name: Create Student Folder
         run: |
-          mkdir -p new-folder
-          echo "New folder created" > new-folder/README.md
-
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: GitHub Actions
-          author_email: actions@github.com
-          message: "Create new folder on invite"
-          add: "new-folder"
+          mkdir $GITHUB_WORKSPACE/$MEMBER_LOGIN
+          cp -r $GITHUB_WORKSPACE/.github/template/. $GITHUB_WORKSPACE/$MEMBER_LOGIN
+        env:
+          MEMBER_LOGIN: ${{ github.event.member.login }}
