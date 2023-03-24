@@ -1,0 +1,18 @@
+* {
+    background-color:aqua;
+}
+h1, p {
+    font-family: 'Delicious Handrawn', cursive;
+}
+h1 {
+    color:blueviolet;
+    text-align:center;
+}
+
+p {
+    color: whitesmoke;
+    font-size: 2rem;
+    text-transform:capitalize;
+    text-align: center;
+    padding: 2em;
+}
