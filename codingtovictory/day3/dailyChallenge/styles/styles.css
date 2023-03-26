@@ -1,0 +1,10 @@
+.square {
+    display: inline-block;
+    width: 12.5vw;
+    height: 12.5vw;
+    background-color: #ffffff;
+}
+
+.square:nth-child(odd) {
+    background-color: #000000;
+}

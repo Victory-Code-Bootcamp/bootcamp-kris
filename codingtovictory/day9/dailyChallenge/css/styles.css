@@ -8,7 +8,16 @@ h1 {
     color:blueviolet;
     text-align:center;
 }
+hr {
+    border-top: 3px solid #000;
+}
 
+h2 {
+    text-align: center;
+}
+.dog {
+    text-align: center;
+}
 p {
     color: whitesmoke;
     font-size: 2rem;
