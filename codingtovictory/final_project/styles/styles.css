@@ -1,0 +1,16 @@
+* {
+    background-color: lightblue;
+    color: black;
+}
+
+nav {
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+}
+
+h1 {
+    text-align: center;
+}
