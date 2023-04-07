@@ -50,3 +50,31 @@ table {
 
 /* End Meyers CSS Reset */
 
+* {
+    background-color: blueviolet;
+    color:azure;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+}
+.nav-link {
+    display: inline-block;
+    padding: 20px;
+}
+
+.welcome {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.betterment {
+    padding: 20px;
+}
+
+.improve-responsiveness {
+    padding: 20px;
+    text-align: left;
+}
