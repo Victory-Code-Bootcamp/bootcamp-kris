@@ -1,15 +1,15 @@
-h1 {
+header {
     background-color: green !important;
 }
 
 @media only screen and (max-width: 768px) {
-    h1 {
+    header {
         background-color: purple !important;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    h1 {
+    header {
         background-color: aqua !important;
     }
 }
