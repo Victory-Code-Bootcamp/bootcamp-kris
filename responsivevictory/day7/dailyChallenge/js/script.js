@@ -6,11 +6,7 @@ console.log(myFirstName.length);
 var luckyNumberOne = 13;
 var luckyNumberTwo = 7;
 console.log(
-  "My first lucky number is " +
-    luckyNumberOne +
-    ". My second lucky number is " +
-    luckyNumberTwo +
-    "."
+  `My first lucky number is ${luckyNumberOne}. My second lucky number is ${luckyNumberTwo}.`
 );
 var undefinedVariable;
 console.log(undefinedVariable);
