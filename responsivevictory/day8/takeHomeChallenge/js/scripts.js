@@ -18,3 +18,12 @@ let randomNumber = Math.floor(Math.random() * 100);
 console.log(
   `Your randomly generated number between 1 and 100 is ${randomNumber}`
 );
+
+// Math Challenge #3
+// Have the user enter a number into the prompt and use that number to alert the user of the square root of the number they entered
+
+let userNum = prompt(
+  `I'll share the square root of a number, if you enter a number for me.`
+);
+let squareRoot = Math.sqrt(userNum);
+alert(`The square root of ${userNum} is ${squareRoot}`);
