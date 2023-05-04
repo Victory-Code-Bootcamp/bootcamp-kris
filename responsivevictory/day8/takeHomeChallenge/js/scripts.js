@@ -27,3 +27,10 @@ let userNum = prompt(
 );
 let squareRoot = Math.sqrt(userNum);
 alert(`The square root of ${userNum} is ${squareRoot}`);
+
+// Date Challenge
+// Date Challenge #1
+// Create a new Date object and output its value as a string via console log
+
+let date = new Date();
+console.log(date.toString());
