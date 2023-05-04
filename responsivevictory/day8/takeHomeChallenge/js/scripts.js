@@ -34,3 +34,8 @@ alert(`The square root of ${userNum} is ${squareRoot}`);
 
 let date = new Date();
 console.log(date.toString());
+
+// Date Challenge #2
+// Get the current year from a Date object and console log the output
+
+console.log(date.getFullYear());
