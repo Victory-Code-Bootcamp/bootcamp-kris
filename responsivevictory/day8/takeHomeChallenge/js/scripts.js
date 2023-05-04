@@ -36,6 +36,11 @@ let date = new Date();
 console.log(date.toString());
 
 // Date Challenge #2
-// Get the current year from a Date object and console log the output.
+// Get the current year from a Date object and console log the output
 
 console.log(date.getFullYear());
+
+// Date Challenge #3
+// Create a new Date object and add 10 days to it. Print out the new date.
+
+console.log(date.getDay() + 10);
