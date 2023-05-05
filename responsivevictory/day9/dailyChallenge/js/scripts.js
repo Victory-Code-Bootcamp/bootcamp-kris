@@ -88,7 +88,7 @@ alert(
 
 // Write a subtract function that returns the result of num1 minus num2
 let subNum1 = Number(prompt("Enter a number to subtract."));
-let subNum2 = Number(prompt("Enter a number to subtract."));
+let subNum2 = Number(prompt("Enter another number to subtract."));
 let subtractFunction = (subNum1, subNum2) => subNum1 - subNum2;
 console.log(
   `The value of ${subNum1} minus ${subNum2} is ${subtractFunction(
@@ -104,9 +104,35 @@ alert(
 );
 
 // Write a multiply function that returns the result of num1 times num2
-let multiplyFunction = (num1, num2) => num1 * num2;
-console.log(multiplyFunction(1, 1));
+let multNum1 = Number(prompt("Enter a number to multiply."));
+let multNum2 = Number(prompt("Enter another number to multiply."));
+let multiplyFunction = (multNum1, multNum2) => multNum1 * multNum2;
+console.log(
+  `The value of ${multNum1} multiplied by ${multNum2} is ${multiplyFunction(
+    multNum1,
+    multNum2
+  )}`
+);
+alert(
+  `The value of ${multNum1} multiplied by ${multNum2} is ${multiplyFunction(
+    multNum1,
+    multNum2
+  )}`
+);
 
 // Write a divide function that returns the result of num1 divided num2
-let divideFunction = (num1, num2) => num1 / num2;
-console.log(divideFunction(100, 10));
+let divNum1 = Number(prompt("Please enter a number to divide."));
+let divNum2 = Number(prompt("Please enter another number to divide."));
+let divideFunction = (divNum1, divNum2) => divNum1 / divNum2;
+console.log(
+  `The value of ${divNum1} divided by ${divNum2} is ${divideFunction(
+    divNum1,
+    divNum2
+  )}`
+);
+alert(
+  `The value of ${divNum1} divided by ${divNum2} is ${divideFunction(
+    divNum1,
+    divNum2
+  )}`
+);
