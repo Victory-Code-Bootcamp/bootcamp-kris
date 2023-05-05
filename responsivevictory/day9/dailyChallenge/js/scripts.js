@@ -38,45 +38,70 @@ let magicString = prompt("Tell me the string of your dreams...");
 let codeReturn = (magicString) => {
   // AA if chars is greater than 15
   if (magicString.length > 15) {
-    return "AA";
     console.log("Your secret code is: AA");
+    return "AA";
     // AB if chars is greater than 13 and less than or equal to 15
   } else if (magicString.length > 13 && magicString.length <= 15) {
-    return "AB";
     console.log("Your secret code is: AB");
+    return "AB";
     // BB if chars is greater than 10 and less than or equal to 13
   } else if (magicString.length > 10 && magicString.length <= 13) {
-    return "BB";
     console.log("Your secret code is: BB");
+    return "BB";
     // BC if chars is greater than 7 and less than or equal to 10
   } else if (magicString.length > 7 && magicString.length <= 10) {
-    return "BC";
     console.log("Your secret code is: BC");
+    return "BC";
     // CC if chars is greater than 5 and less than or equal to 7
   } else if (magicString.length > 5 && magicString.length <= 7) {
-    return "CC";
     console.log("Your secret code is: CC");
+    return "CC";
     // DD if chars is less than or equal to 5
-  } else if (magicString.length <= 5) {
-    return "DD";
+  } else if (magicString.length <= 5 && magicString.length > 0) {
     console.log("Your secret code is: DD");
+    return "DD";
+  } else if (magicString.length === 0) {
+    console.log("Please enter a valid string.");
+    return "Please enter a valid string.";
   }
 };
-codeReturn(magicString);
-alert(`Your secret code is: ${codeReturn(magicString)}`);
+// Put function results in variable so that console statement doesn't register twice when the alert happens
+let finalResult = codeReturn(magicString);
 
+if (magicString.length >= 1) {
+  alert(`Your secret code is: ${finalResult}`);
+} else if (magicString.length === 0) {
+  alert(`Please enter a valid string.`);
+}
 // Challenge 4:
 // In this challenge you will be writing code to create functions capable of different arithmetic operations
 // Write an add function that returns the result of num1 plus num2
-let num1 = prompt("Enter a number.");
-let num2 = prompt("Enter another number.");
-let addFunction = (num1, num2) => Number(num1) + Number(num2);
-console.log(`The value of ${num1} plus ${num2} is ${addFunction(num1, num2)}`);
-alert(`The value of ${num1} plus ${num2} is ${addFunction(num1, num2)}`);
+let addNum1 = Number(prompt("Enter a number to add."));
+let addNum2 = Number(prompt("Enter another number to add."));
+let addFunction = (addNum1, addNum2) => addNum1 + addNum2;
+console.log(
+  `The value of ${addNum1} plus ${addNum2} is ${addFunction(addNum1, addNum2)}`
+);
+alert(
+  `The value of ${addNum1} plus ${addNum2} is ${addFunction(addNum1, addNum2)}`
+);
 
 // Write a subtract function that returns the result of num1 minus num2
-let subtractFunction = (num1, num2) => num1 - num2;
-console.log(subtractFunction(3, 1));
+let subNum1 = Number(prompt("Enter a number to subtract."));
+let subNum2 = Number(prompt("Enter a number to subtract."));
+let subtractFunction = (subNum1, subNum2) => subNum1 - subNum2;
+console.log(
+  `The value of ${subNum1} minus ${subNum2} is ${subtractFunction(
+    subNum1,
+    subNum2
+  )}`
+);
+alert(
+  `The value of ${subNum1} minus ${subNum2} is ${subtractFunction(
+    subNum1,
+    subNum2
+  )}`
+);
 
 // Write a multiply function that returns the result of num1 times num2
 let multiplyFunction = (num1, num2) => num1 * num2;
