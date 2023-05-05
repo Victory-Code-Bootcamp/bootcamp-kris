@@ -28,5 +28,28 @@ let assessment = (userAge) =>
 console.log(assessment());
 
 // Challenge 3:
-// You are given a string of characters. 
+// You are given a string of characters.
 let magicString = prompt("Tell me the string of your dreams...");
+// Write a function that takes the string as an arguments and returns the codes below using if/else if statement
+let codeReturn = (magicString) => {
+  // AA if chars is greater than 15
+  if (magicString.length > 15) {
+    console.log("AA");
+    // AB if chars is greater than 13 and less than or equal to 15
+  } else if (magicString.length > 13 && magicString.length <= 15) {
+    console.log("AB");
+    // BB if chars is greater than 10 and less than or equal to 13
+  } else if (magicString.length > 10 && magicString.length <= 13) {
+    console.log("BB");
+    // BC if chars is greater than 7 and less than or equal to 10
+  } else if (magicString.length > 7 && magicString.length <= 10) {
+    console.log("BC");
+    // CC if chars is greater than 5 and less than or equal to 7
+  } else if (magicString.length > 5 && magicString.length <= 7) {
+    console.log("CC");
+    // DD if chars is less than or equal to 5
+  } else if (magicString.length <= 5) {
+    console.log("DD");
+  }
+};
+codeReturn(magicString);
