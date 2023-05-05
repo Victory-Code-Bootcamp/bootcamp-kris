@@ -5,27 +5,31 @@ let name = prompt(`What is your name?`);
 // Use an alert() as the result for each case
 switch (name.toLowerCase()) {
   case "authello":
+    console.log(`Your name is seriously Authello!???!`);
     alert(`Your name is seriously Authello!???!`);
     break;
   case "onkur":
+    console.log(`I see you, Onkur...`);
     alert(`I see you, Onkur...`);
     break;
   case "kris":
+    console.log("Better luck next time, Kris!");
     alert("Better luck next time, Kris!");
     break;
   default:
+    console.log(`Wow! I didn't see ${name} coming.`);
     alert(`Wow! I didn't see ${name} coming.`);
 }
 
 // Challenge 2:
 // Create a prompt asking for their age and store the result in a variable
-let userAge = prompt("How old be you on this date in history??");
+let userAge = Number(prompt("How old be you on this date in history??"));
 // Write a function that takes the prompt result as a argument and returns ternary expression with a boolean depending if their age is less than or equal to 18
 let assessment = (userAge) =>
-  userAge <= 18
-    ? "Sorry, you're not old enough."
-    : "You are over 18! Smoke away!";
-console.log(assessment());
+  userAge <= 18 ? "You're too young to smoke." : "Smoke 'em if you got 'em!";
+
+console.log(assessment(userAge));
+alert(assessment(userAge));
 
 // Challenge 3:
 // You are given a string of characters.
