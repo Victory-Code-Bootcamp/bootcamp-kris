@@ -53,3 +53,24 @@ let codeReturn = (magicString) => {
   }
 };
 codeReturn(magicString);
+
+// Challenge 4:
+// In this challenge you will be writing code to create functions capable of different arithmetic operations
+// Write an add function that returns the result of num1 plus num2
+let num1 = prompt("Enter a number.");
+let num2 = prompt("Enter another number.");
+let addFunction = (num1, num2) => Number(num1) + Number(num2);
+console.log(`The value of ${num1} plus ${num2} is ${addFunction(num1, num2)}`);
+alert(`The value of ${num1} plus ${num2} is ${addFunction(num1, num2)}`);
+
+// Write a subtract function that returns the result of num1 minus num2
+let subtractFunction = (num1, num2) => num1 - num2;
+console.log(subtractFunction(3, 1));
+
+// Write a multiply function that returns the result of num1 times num2
+let multiplyFunction = (num1, num2) => num1 * num2;
+console.log(multiplyFunction(1, 1));
+
+// Write a divide function that returns the result of num1 divided num2
+let divideFunction = (num1, num2) => num1 / num2;
+console.log(divideFunction(100, 10));
