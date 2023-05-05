@@ -38,25 +38,32 @@ let magicString = prompt("Tell me the string of your dreams...");
 let codeReturn = (magicString) => {
   // AA if chars is greater than 15
   if (magicString.length > 15) {
-    console.log("AA");
+    return "AA";
+    console.log("Your secret code is: AA");
     // AB if chars is greater than 13 and less than or equal to 15
   } else if (magicString.length > 13 && magicString.length <= 15) {
-    console.log("AB");
+    return "AB";
+    console.log("Your secret code is: AB");
     // BB if chars is greater than 10 and less than or equal to 13
   } else if (magicString.length > 10 && magicString.length <= 13) {
-    console.log("BB");
+    return "BB";
+    console.log("Your secret code is: BB");
     // BC if chars is greater than 7 and less than or equal to 10
   } else if (magicString.length > 7 && magicString.length <= 10) {
-    console.log("BC");
+    return "BC";
+    console.log("Your secret code is: BC");
     // CC if chars is greater than 5 and less than or equal to 7
   } else if (magicString.length > 5 && magicString.length <= 7) {
-    console.log("CC");
+    return "CC";
+    console.log("Your secret code is: CC");
     // DD if chars is less than or equal to 5
   } else if (magicString.length <= 5) {
-    console.log("DD");
+    return "DD";
+    console.log("Your secret code is: DD");
   }
 };
 codeReturn(magicString);
+alert(`Your secret code is: ${codeReturn(magicString)}`);
 
 // Challenge 4:
 // In this challenge you will be writing code to create functions capable of different arithmetic operations
