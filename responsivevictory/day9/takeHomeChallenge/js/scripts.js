@@ -59,6 +59,7 @@ if (divResult === true) {
 // Declare a variable called birthday that looks like this: const birthday = new Date('August 19, 1975 23:15:30');
 // Use the getDay() method to create a variable that keeps track of the day of your birthday
 // Write a switch statement using the day of your birthday variable that will cover all cases from Monday thru Friday, console log the day of the week in a string
+
 const birthYear = Number(prompt("Please enter the year of your birth. (YYYY)"));
 const birthMonth = Number(
   prompt("Please enter the numeric month of your birth (MM).")
@@ -73,53 +74,46 @@ let birthWeekDay;
 if (isNaN(birthYear) || isNaN(birthMonth) || isNaN(birthDay)) {
   console.log(`Please enter a valid, numeric response.`);
   alert(`Please enter a valid, numeric response`);
-} else if (birthYear, birthMonth, birthDay){
+} else if ((birthYear, birthMonth, birthDay)) {
   birthDate = new Date(`${birthYear}-${birthMonth}-${birthDay}`);
   console.log(birthDate.toLocaleDateString());
-
-  if (isNaN(birthDate)) {
-    console.log(
-      `The date you entered is not valid. Please enter a valid date.`
-    );
-    alert(`The date you entered is not valid. Please enter a valid date.`);
-  } else if (isNaN(birthWeekDay)) {
-    console.log(
-      `The date you entered is not valid. Please enter a valid date.`
-    );
-    alert(`The date you entered is not valid. Please enter a valid date.`);
-  } else {
-    console.log(birthDate);
-    birthWeekDay = birthDate.getDay();
-    switch (birthWeekDay) {
-      case 0:
-        birthWeekDay = "Sunday";
-        console.log("The day of your birth is Sunday.");
-        break;
-      case 1:
-        birthWeekDay = "Monday";
-        console.log("The day of your birth is Monday.");
-        break;
-      case 2:
-        birthWeekDay = "Tuesday";
-        console.log("The day of your birth is Tuesday.");
-        break;
-      case 3:
-        birthWeekDay = "Wednesday";
-        console.log("The day of your birth is Wednesday.");
-        break;
-      case 4:
-        birthWeekDay = "Thursday";
-        console.log("The day of your birth is Thursday.");
-        break;
-      case 5:
-        birthWeekDay = "Friday";
-        console.log("The day of your birth is Friday.");
-        break;
-      case 6:
-        birthWeekDay = "Saturday";
-        console.log("The day of your birth is Saturday.");
-        break;
-    }
-    alert(`Did you know you were born on a ${birthWeekDay}?`);
-  }
 }
+console.log(birthDate);
+birthWeekDay = birthDate.getDay();
+switch (birthWeekDay) {
+  case 0:
+    birthWeekDay = "Sunday";
+    console.log("The day of your birth is Sunday.");
+    break;
+  case 1:
+    birthWeekDay = "Monday";
+    console.log("The day of your birth is Monday.");
+    break;
+  case 2:
+    birthWeekDay = "Tuesday";
+    console.log("The day of your birth is Tuesday.");
+    break;
+  case 3:
+    birthWeekDay = "Wednesday";
+    console.log("The day of your birth is Wednesday.");
+    break;
+  case 4:
+    birthWeekDay = "Thursday";
+    console.log("The day of your birth is Thursday.");
+    break;
+  case 5:
+    birthWeekDay = "Friday";
+    console.log("The day of your birth is Friday.");
+    break;
+  case 6:
+    birthWeekDay = "Saturday";
+    console.log("The day of your birth is Saturday.");
+    break;
+}
+alert(`Did you know you were born on a ${birthWeekDay}?`);
+
+// Challenge 4
+// Same Questions was answered in Challenge 2
+
+// Challenge 5
+// 
