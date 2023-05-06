@@ -54,3 +54,21 @@ if (divResult === true) {
 } else if (isNaN(divResult)) {
   alert("Pick a real number next time, buddy.");
 }
+
+// Challenge 3
+// Declare a variable called birthday that looks like this: const birthday = new Date('August 19, 1975 23:15:30');
+// Use the getDay() method to create a variable that keeps track of the day of your birthday
+// Write a switch statement using the day of your birthday variable that will cover all cases from Monday thru Friday, console log the day of the week in a string
+const birthYear = Number(prompt("Please enter the year of your birth."));
+const birthMonth = Number(prompt("Please enter the month of your birth."));
+const birthDay = Number(prompt("Please enter the numeric day of your birth."));
+const birthDate = new Date(`${birthYear}, ${birthMonth}, ${birthDay}`);
+console.log(birthDate);
+const birthWeekDay = birthDate.getDay();
+console.log(birthWeekDay);
+// switch (birthDay) {
+//   case 0:
+//     console.log("The day of your birth is Sunday.");
+
+//     break;
+// }
