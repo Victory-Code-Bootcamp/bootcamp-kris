@@ -116,4 +116,44 @@ alert(`Did you know you were born on a ${birthWeekDay}?`);
 // Same Questions was answered in Challenge 2
 
 // Challenge 5
-// 
+// You're tasked with writing a function calculateSum that calculates the sum of two input numbers, a and b, and returns the result. However, the function should handle the following edge cases:
+// If either a or b is not a number, the function should return an error message "Please provide valid numbers".
+// If either a or b is undefined, the function should use a default value of 0.
+// If either a or b is null, the function should use a default value of 0.
+// If either a or b is a floating-point number, the function should round it to the nearest integer before performing the calculation.
+// If the sum of a and b is greater than 100, the function should return an error message "Sum is too large".
+let a = Number(prompt("Enter a number to add to your sum."));
+let b = Number(prompt("Enter another number to add to your sum."));
+
+let calculatesSum = (a, b) => {
+  if (isNaN(a) || isNaN(b)) {
+    alert("Please provide a valid number.");
+  } else if (typeof a === "undefined") {
+    a = 0;
+  } else if (typeof b === "undefined") {
+    b = 0;
+  } else if (a === null) {
+    a = 0;
+  } else if (b === null) {
+    b = 0;
+  } else if (!Number.isInteger(a)) {
+    a = Math.round(a);
+    return calculatesSum(a, b);
+  } else if (!Number.isInteger(b)) {
+    b = Math.round(b);
+    return calculatesSum(a, b);
+  } else if (a + b > 100) {
+    console.log(`Sum is too large.`);
+    alert(`Sum is too large.`);
+  }
+
+  let sumReturn = (a, b) => {
+    let returnedSum = a + b;
+    console.log(`The sum of ${a} and ${b} is ${returnedSum}.`);
+    alert(`The sum of ${a} and ${b} is ${returnedSum}.`);
+    return returnedSum;
+  };
+  sumReturn(a, b);
+};
+
+calculatesSum(a, b);
