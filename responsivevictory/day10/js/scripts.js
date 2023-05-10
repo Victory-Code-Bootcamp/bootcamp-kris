@@ -12,6 +12,11 @@ console.log(outsideVar);
 // Call the function
 harborLocal();
 // Attempt to use local variable outside of function just to watch it fail
-console.log(insideVar);
+// console.log(insideVar);
 
 // Odd or Even Challenge
+// Write a function that determines whether a number is odd or even
+
+let oddVersusEven = (number) => (number % 2 === 0 ? console.log("even") : console.log("odd"));
+
+oddVersusEven(20);
