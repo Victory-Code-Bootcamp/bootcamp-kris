@@ -28,9 +28,20 @@ async function selectPokemon(pokeSelection) {
   pokeNameElement.textContent = `Name: ${chosenPoke.name}`;
   pokeDataDiv.appendChild(pokeNameElement);
 
-  // Add the pokemon sprites to the div as a list  
-  const pokeSpritesElement = document.createElement("p");
-  pokeSpritesElement.textContent = `Sprites: `;
+  // Add the pokemon sprites to the div as a list
+  //   const pokeSpritesElement = document.createElement("p");
+  //   pokeSpritesElement.textContent = `Sprites: `;
+  //   const pokeSpritesList = document.createElement("ul");
+  //   for (let i = 0; i < chosenPoke.sprites.length; i++) {
+  //     console.log(chosenPoke.sprites[i]);
+  //     const pokeSpritesListItem = document.createElement("li");
+  //     pokeSpritesListItem.textContent = chosenPoke.sprites[i];
+  //     pokeSpritesList.appendChild(pokeSpritesListItem);
+  //   }
+  //   pokeSpritesElement.appendChild(pokeSpritesList);
+  //   pokeDataDiv.appendChild(pokeSpritesElement);
+  
+
   // Add the pokemon abilities to the div as a list
   const pokeAbilitiesElement = document.createElement("p");
   pokeAbilitiesElement.textContent = `Abilities: `;
@@ -46,6 +57,7 @@ async function selectPokemon(pokeSelection) {
   // Add the div to the HTML page
   document.getElementById("pokeData").appendChild(pokeDataDiv);
 }
+
 // Hard-Coded Version
 // async function pokeGrab() {
 //   const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
