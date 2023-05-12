@@ -37,3 +37,22 @@ let evenSum = (arr) => {
 };
 
 console.log(evenSum(array));
+
+// Write a function that takes in an array of strings and returns a new array where each string is capitalized.
+
+stringArray = [
+  "hello, world",
+  "my name is kris",
+  "juan's name is juan",
+  "we party over code",
+];
+
+let capitalizedString = (strArr) => {
+  let capStringArray = [];
+  for (let i = 0; i < strArr.length; i++) {
+    capStringArray.push(strArr[i].charAt(0).toUpperCase() + strArr[i].slice(1));
+  }
+  return capStringArray;
+};
+
+console.log(capitalizedString(stringArray));
