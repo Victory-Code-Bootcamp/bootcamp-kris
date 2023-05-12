@@ -29,19 +29,18 @@ async function selectPokemon(pokeSelection) {
   pokeDataDiv.appendChild(pokeNameElement);
 
   // Add the pokemon sprites to the div as a list
-  //   const pokeSpritesElement = document.createElement("p");
-  //   pokeSpritesElement.textContent = `Sprites: `;
-  //   const pokeSpritesList = document.createElement("ul");
-  //   for (let i = 0; i < chosenPoke.sprites.length; i++) {
-  //     console.log(chosenPoke.sprites[i]);
-  //     const pokeSpritesListItem = document.createElement("li");
-  //     pokeSpritesListItem.textContent = chosenPoke.sprites[i];
-  //     pokeSpritesList.appendChild(pokeSpritesListItem);
-  //   }
-  //   pokeSpritesElement.appendChild(pokeSpritesList);
-  //   pokeDataDiv.appendChild(pokeSpritesElement);
-  
-
+  const pokeSpritesElement = document.createElement("p");
+  pokeSpritesElement.textContent = `Sprites: `;
+  const pokeSpritesList = document.createElement("ul");
+  const pokeSpritesListItem = document.createElement("li");
+  const pokeSpriteImg = document.createElement("img");
+  pokeSpriteImg.src = chosenPoke.sprites.front_default;
+  pokeDataDiv.appendChild(pokeSpriteImg);
+  pokeSpritesListItem.textContent = chosenPoke.sprites.front_default;
+  pokeSpritesList.appendChild(pokeSpritesListItem);
+  pokeSpritesElement.appendChild(pokeSpritesList);
+  pokeDataDiv.appendChild(pokeSpritesElement);
+  //   console.log(chosenPoke.sprites.front_default);
   // Add the pokemon abilities to the div as a list
   const pokeAbilitiesElement = document.createElement("p");
   pokeAbilitiesElement.textContent = `Abilities: `;
