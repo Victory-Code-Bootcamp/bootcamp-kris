@@ -23,6 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     const pokeSelection = await response.json();
     console.log(pokeSelection);
+
+    pokeData.innerHTML = "";
+    let pokeName = document.createElement("h1");
+    let pokeNameText = document.createTextNode(pokeSelection.name);
+
+    pokeName.appendChild(pokeNameText);
+    pokeData.appendChild(pokeName);
+
+    let pokeExperience = document.createElement("h2");
+    let pokeExperienceText = document.createTextNode(
+      pokeSelection.base_experience
+    );
+
+    pokeExperience.appendChild(pokeExperienceText);
+    pokeData.appendChild(pokeExperience);
   }
 });
 
