@@ -32,7 +32,6 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
-
   area() {
     return this.length * this.width;
   }
@@ -41,3 +40,30 @@ class Rectangle {
 const rectangle = new Rectangle(5, 20);
 console.log(rectangle.area());
 
+// Challenge 4
+// Create a class called Employee with a constructor that takes in name and salary parameters. Add a getSalary() method that returns the employee's salary. Create a subclass called Managerthat extends Employee and has an additional bonusproperty. Override the getSalary() method in Manager to return the employee's salary plus the bonus. Create an instance of Manager with name "John" and salary 5000, and bonus1000, and call the getSalary() method.
+
+class Employee {
+  constructor(name, salary) {
+    this.name = name;
+    this.salary = salary;
+  }
+
+  getSalary() {
+    return `${this.name} earns ${this.salary}`;
+  }
+}
+
+class Manager extends Employee {
+  constructor(name, salary, bonus) {
+    super(name, salary);
+    this.bonus = bonus;
+  }
+
+  getSalary() {
+    return `${this.name} earns ${this.salary + this.bonus}`;
+  }
+}
+
+const manager = new Manager("John", 5000, 1000);
+console.log(manager.getSalary());
