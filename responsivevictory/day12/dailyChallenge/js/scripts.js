@@ -23,3 +23,21 @@ const car = {
 };
 
 console.log(car.Year);
+
+// Challenge 3
+// Create a class called "Rectangle" with properties "length" and "width". Add a method to the class called "area" that calculates and returns the area of the rectangle (length x width). Create a new instance of the class and console.log its area.
+
+class Rectangle {
+  constructor(length, width) {
+    this.length = length;
+    this.width = width;
+  }
+
+  area() {
+    return this.length * this.width;
+  }
+}
+
+const rectangle = new Rectangle(5, 20);
+console.log(rectangle.area());
+
