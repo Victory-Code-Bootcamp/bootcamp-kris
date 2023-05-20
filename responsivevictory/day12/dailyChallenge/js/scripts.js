@@ -67,3 +67,4 @@ class Manager extends Employee {
 
 const manager = new Manager("John", 5000, 1000);
 console.log(manager.getSalary());
+
