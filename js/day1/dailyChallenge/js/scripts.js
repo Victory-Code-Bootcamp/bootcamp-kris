@@ -11,17 +11,10 @@ console.log(combinedArrays);
 // Challenge 2: Object Spread
 // Create a new object by merging multiple objects using the spread operator.
 
-function Person(name, age, eyeColor) {
-  this.name = name;
-  this.age = age;
-  this.eyeColor = eyeColor;
-}
+const person1 = { name: "Kris", age: 35, eyeColor: "Hazel" };
+const vehicle1 = { make: "Ford", model: "Explorer", year: 2016 };
 
-const person1 = new Person("Kris", 35, "Hazel");
-const person2 = new Person("Brielle", 25, "Blue");
-const person3 = new Person("Clara", 3, "Brown");
-
-const combinedPersons = { ...person1, ...person2, ...person3 };
+const combinedPersons = { ...person1, ...vehicle1 };
 
 console.log(combinedPersons);
 
@@ -31,7 +24,7 @@ console.log(combinedPersons);
 function arrayRest(...numbers) {
   let array = [];
   for (number of numbers) {
-    array.push([number]);
+    array.push(number);
   }
   return array;
 }
@@ -58,7 +51,7 @@ const pers = {
   occupation: "Grandfather",
 };
 
-const {name, age, occupation} = pers;
+const { name, age, occupation } = pers;
 
 console.log(name);
 console.log(age);
@@ -67,5 +60,31 @@ console.log(occupation);
 // Challenge 7: Destructuring with Default Values
 // Use destructuring to assign default values to variables when extracting from an array or object.
 
+const personA = {
+  name: "John",
+  age: 30,
+};
+
+// Destructuring assignment with default value and renaming
+const { name: fullName, city = "Unknown" } = personA;
+
+console.log(name);
+console.log(age);
+console.log(city);
+console.log(fullName);
+console.log(personA)
+
+
 // Challenge 8: Destructuring Function Parameters
 // Create a function that accepts an object as a parameter and uses destructuring to extract specific properties.
+
+const car = { make: "Ford", model: "Explorer", year: 2016 };
+
+function carDestruct(object) {
+  const { make, model, year } = car;
+  console.log(make);
+  console.log(model);
+  console.log(year);
+}
+
+carDestruct(car);
