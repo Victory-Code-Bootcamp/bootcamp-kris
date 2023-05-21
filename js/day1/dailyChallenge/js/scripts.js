@@ -28,6 +28,16 @@ console.log(combinedPersons);
 // Challenge 3: Array Rest
 // Create a function that accepts a variable number of arguments and uses the rest operator to gather them into an array.
 
+function arrayRest(...numbers) {
+  let array = [];
+  for (number of numbers) {
+    array.push([number]);
+  }
+  return array;
+}
+
+console.log(arrayRest(2, 4, 6, 8));
+
 // Challenge 5: Array Destructuring
 // Extract individual elements from an array using array destructuring.
 
