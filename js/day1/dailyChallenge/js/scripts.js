@@ -41,6 +41,14 @@ console.log(arrayRest(2, 4, 6, 8));
 // Challenge 5: Array Destructuring
 // Extract individual elements from an array using array destructuring.
 
+const names = ["Victor", "Onkur", "Kris"];
+
+const [pers1, pers2, pers3] = names;
+
+console.log(pers1);
+console.log(pers2);
+console.log(pers3);
+
 // Challenge 6: Object Destructuring
 // Extract specific properties from an object using object destructuring.
 
