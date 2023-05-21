@@ -52,6 +52,18 @@ console.log(pers3);
 // Challenge 6: Object Destructuring
 // Extract specific properties from an object using object destructuring.
 
+const pers = {
+  name: "John",
+  age: 87,
+  occupation: "Grandfather",
+};
+
+const {name, age, occupation} = pers;
+
+console.log(name);
+console.log(age);
+console.log(occupation);
+
 // Challenge 7: Destructuring with Default Values
 // Use destructuring to assign default values to variables when extracting from an array or object.
 
