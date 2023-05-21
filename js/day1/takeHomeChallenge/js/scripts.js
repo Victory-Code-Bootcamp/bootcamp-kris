@@ -32,3 +32,8 @@ console.log("Welcome to the JS-- Take Home Challenge: Day 1");
 
 // 4. Name: ...
 // ...
+
+const { faker } = require("../node_modules/@faker-js/faker");
+console.log({ name: faker.person.firstName() });
+let personFake = faker.person.firstName();
+console.log(personFake);
