@@ -3,6 +3,11 @@ console.log("Welcome to JS-- Daily Challenge: Day 1");
 // Challenge 1: Array Spread
 // Combine two arrays into a single array using the spread operator.
 
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const combinedArrays = [...array1, ...array2];
+console.log(combinedArrays);
+
 // Challenge 2: Object Spread
 // Create a new object by merging multiple objects using the spread operator.
 
