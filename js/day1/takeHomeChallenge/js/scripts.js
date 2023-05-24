@@ -1,4 +1,4 @@
-console.log("Welcome to the JS-- Take Home Challenge: Day 1");
+// console.log("Welcome to the JS-- Take Home Challenge: Day 1");
 
 // Challenge: Generate Random User Data
 
@@ -32,8 +32,25 @@ console.log("Welcome to the JS-- Take Home Challenge: Day 1");
 
 // 4. Name: ...
 // ...
+var { faker } = require("@faker-js/faker");
 
-const { faker } = require("../node_modules/@faker-js/faker");
-console.log({ name: faker.person.firstName() });
-let personFake = faker.person.firstName();
-console.log(personFake);
+// Get number of times needed to loop through logic
+let numberUsers = Number(process.argv[2]);
+
+let generateList = (numberUsers) => {
+  // Loop through the specific iterations
+  let fakePersonGroup = [];
+  for (i = 0; i < numberUsers; i++) {
+    let fakePerson = {
+      name: faker.person.fullName(),
+      email: faker.internet.email(),
+      address: faker.location.street(),
+      phone: faker.phone.number(),
+    };
+    fakePersonGroup.push(fakePerson);
+  }
+  return fakePersonGroup;
+};
+
+let finalList = generateList(numberUsers);
+console.log(finalList);
