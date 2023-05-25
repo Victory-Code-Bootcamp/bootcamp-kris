@@ -1,0 +1,28 @@
+html
+  head
+    title My Express App
+    link(rel='stylesheet', href='/styles.css')
+
+  body
+    header
+      h1 Welcome to my Express app!
+
+    nav
+      ul
+        li
+          a(href='/') Home
+        li
+          a(href='/about') About
+        li
+          a(href='/contact') Contact
+
+    main
+      h2 Latest Blog Posts
+      each book in books  
+        article
+          h1= book.isbn
+          h3= book.title
+          p= book.author
+
+    footer
+      p Copyright © 2023 My Express App
